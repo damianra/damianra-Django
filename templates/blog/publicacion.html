@@ -1,0 +1,16 @@
+{% extends 'plantilla.html' %}
+
+{% block content %}
+<h1 class="align-middle text-center text-lg-center pt-4 pb-4">{{ proyecto.titulo }}</h1>
+<div class="container">
+    
+    {% autoescape off %}
+        {{ proyecto.contenido }}
+    {% endautoescape %}
+        
+        
+
+
+</div>
+
+{% endblock %}

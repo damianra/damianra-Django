@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% load i18n %} 
+
+{% block base %}
+<header>
+    <div class="container">
+            <div class="row justify-content-md-between">
+                <div class="col-lg-4">
+                <a href="{% url 'inicio' %}">
+                  <img src="{% static 'img/logo.png' %}" class="img-fluid mx-auto d-block"/>
+                </a>
+                </div>
+                
+                <div class="col-lg-4">
+                    <nav class="sociales text-center text-lg-right">
+                        <ul>
+                            <li>
+                                <a href="{{Github}}"><span class="sr-only">Github</span></a>
+                            </li>
+                            <li>
+                                <a href="{{Linkedin}}"><span class="sr-only">Linkedin</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+</header>
+
+<div class="navegacion">
+    <nav class="nav-principal navbar navbar-expand-md navbar-dark bg-faded">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_principal" aria-label="Show Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="{% url 'inicio' %}" class="navbar-brand d-lg-none">damianra</a>
+
+        <div class="container">
+            <div class="collapse navbar-collapse w-100" id="nav_principal">
+                <ul class="nav nav-justified w-100 flex-column flex-sm-row">
+               {% for m in menu %}
+                    <li class="nav-item">
+                        <a href="{% url m.link %}" class="nav-link">{{ m.nombre }}</a>
+                    </li>
+                {% endfor %}
+                </ul> 
+            </div>
+        </div>
+    </nav>
+</div>
+{% block content %}
+
+{% endblock %}
+
+<div class="footer container">
+    <div class="row">
+        <div class="col-12 align-middle text-center pt-4 pb-4">
+            <p>Copyright © 2021 Damian Ramirez</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
