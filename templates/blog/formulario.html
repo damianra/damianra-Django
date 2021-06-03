@@ -1,0 +1,19 @@
+{% extends 'plantilla.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	 <div class="container">
+	 </div>
+	 <main class="container">
+		<div id="formulario_contacto" class="row">
+			<div class="col-lg-12 pt-4 pb-4">
+				<h2>Contacto</h2>
+				<hr/>
+				<form class="col-12 action="{% url 'contacto' %}" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+					{{ form | crispy }}
+					<input type="submit" value="Submit" class="btn btn-primary">
+				</form>
+			</div>
+		</div>
+	 </main>
+	{% endblock %}

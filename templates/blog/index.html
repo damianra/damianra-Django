@@ -1,0 +1,50 @@
+{% extends 'plantilla.html' %}
+
+{% block content %}
+<div>
+    <h2 class="align-middle text-center text-lg-center pt-4 pb-4">Pagina personal de Proyectos</h2>
+</div>
+
+<div class="container">
+    <p>Soy Damian Ramirez, esta es mi pagina web donde presento diferentes proyectos con los que fui aprendiendo
+    y avanzando programando diferentes tipos de aplicaciones y scripts, realizando practicas y pruebas de concepto
+    en las diferentes areas que me fueron de interes.<br>
+    Soy un completo autodidacta, me gusta aprender por lo que en todo este tiempo me he dedicado a progresar dia a dia.
+    Tengo conocimientos en Python, C# (windows.forms, ASP.NET y Unity 3D), BASH, Linux, Etical Hacking, Machine Learning.
+    </p>
+    <hr>
+</div>
+
+
+<div class="container">
+    <div class="row justify-content-md-between">
+        <div class="col-12 col-md-6 col-lg-8">
+            <h3>Cursos Realizados:</h3>
+            {% for c in cursos %}
+            <div>
+                <p class="pt-4"><b>{{c.titulo}}</b><br>
+                <p>{{c.finalizado}}<br>
+                Link de validacion de credencial: <a href="{{c.link}}">{{c.link}}</a><br>
+                ID credencial: <b>{{c.id_credencial}}</b></p>
+            </div>
+            <hr>
+            {% endfor %}
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 pb-4">
+            <h3>Ultimos Proyectos:</h3>
+            {% for p in proyectos %}           
+            <div class="card text-lg-center mt-4 p-2">
+                <img src="{{ p.imagenDestacada.url }}" class="card-img-top img-fluid" alt="{{ p.titulo }}"/>
+                <div class="card-body">
+                    <h5 class="card-title">{{ p.titulo }}</h5>
+                    <p class="card-text">{{ p.descripcion_corta }}</p>
+                    <a href="{% url 'proyecto' p.url %}" class="btn btn-primary">Ver mas</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
