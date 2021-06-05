@@ -1,0 +1,17 @@
+{% extends 'plantilla.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row p-4">
+        {% for c in categorias %}
+        <div class="col-md-6 col-lg-4 p-2">
+            <div class="card containerimg p-2 text-center text-lg-center">
+                <img src="{{ c.imagenDestacada.url }}" class="card-img-top img-fluid" alt="..."/>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}

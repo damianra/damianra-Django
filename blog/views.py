@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from blog.models import Cursos, RedesSociales, Proyecto, Menu, Contacto
+from blog.models import Cursos, RedesSociales, Proyecto, Menu, Contacto, Categoria
 from blog.forms import ContactoForm
 from datetime import datetime
 
@@ -32,6 +32,16 @@ def proyecto (request, url):
     contenido = {'proyecto': proyectos, 'Github': redes[0].link, 'Linkedin': redes[1].link, 'menu': menu}
 
     return render(request, 'blog/publicacion.html', contenido)
+
+
+def categorias(request):
+    cate = Categoria.objects.all()
+    menu = Menu.objects.order_by('id')
+    redes = RedesSociales.objects.all()
+
+    contenido = {'categorias': cate, 'Github': redes[0].link, 'Linkedin': redes[1].link, 'menu': menu}
+
+    return render(request, 'blog/categorias.html', contenido)
 
 
 def contacto (request):

@@ -23,7 +23,11 @@ function cargartabla(){
 				xhr.setRequestHeader("X-CSRFToken", csrftoken);
 			}
 		},
+<<<<<<< HEAD
         url : "https://damianra.pythonanywhere.com/btcdata/btchistory/",
+=======
+        url : "http://127.0.0.1:8000/btcdata/btchistory/",
+>>>>>>> cf6b9cace8aae826b75c52fc48eccf39193095d5
 		type : "GET",
         success: function(json){
             json.forEach(element => {
@@ -36,7 +40,11 @@ function cargartabla(){
         error : function(xhr, errmsg, err){
 			console.log('Error en carga de respuesta');
 		},
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> cf6b9cace8aae826b75c52fc48eccf39193095d5
     });
 
     function generate_table(){
@@ -57,6 +65,10 @@ function cargartabla(){
                 $('html, body').animate({scrollTop: 0}, 800);
             }
         });
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> cf6b9cace8aae826b75c52fc48eccf39193095d5
     }
 }

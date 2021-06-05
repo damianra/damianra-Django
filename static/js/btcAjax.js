@@ -23,7 +23,9 @@ function cargartabla(){
 				xhr.setRequestHeader("X-CSRFToken", csrftoken);
 			}
 		},
+
         url : "https://damianra.pythonanywhere.com/btcdata/btchistory/",
+
 		type : "GET",
         success: function(json){
             json.forEach(element => {

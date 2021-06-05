@@ -2,7 +2,6 @@ from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 from ckeditor.fields import RichTextField
 from django.utils.text import slugify
-from django.utils.html import format_html
 
 # Create your models here.
 class Cursos(models.Model):
@@ -30,6 +29,7 @@ class Menu(models.Model):
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=100)
+    imagenDestacada = models.FileField(upload_to='imgproyectos', blank=True, null=True)
     slug = models.CharField(max_length=100,blank=True)
 
     def __str__(self):

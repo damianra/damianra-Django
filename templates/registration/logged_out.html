@@ -1,14 +1,24 @@
 {% extends "admin/base_site.html" %}
 {% load i18n %}
 
+<<<<<<< HEAD
 {% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a></div>{% endblock %}
+=======
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">{% translate 'Home' %}</a></div>{% endblock %}
+>>>>>>> cf6b9cace8aae826b75c52fc48eccf39193095d5
 
 {% block nav-sidebar %}{% endblock %}
 
 {% block content %}
 
+<<<<<<< HEAD
 <p>{% trans "Thanks for spending some quality time with the Web site today." %}</p>
 
 <p><a href="{% url 'admin:index' %}">{% trans 'Log in again' %}</a></p>
+=======
+<p>{% translate "Thanks for spending some quality time with the Web site today." %}</p>
+
+<p><a href="{% url 'admin:index' %}">{% translate 'Log in again' %}</a></p>
+>>>>>>> cf6b9cace8aae826b75c52fc48eccf39193095d5
 
 {% endblock %}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="editor1">
 	<p>Hello world!</p>
 </div>
@@ -17,3 +18,24 @@
 		removePlugins: 'notification'
 	} ) );
 </script>
+=======
+<div id="editor1">
+	<p>Hello world!</p>
+</div>
+
+<div id="editor2">
+	<p>Hello world!</p>
+</div>
+
+<script>
+	exportPdfUtils.initManualTest();
+
+	CKEDITOR.replace( 'editor1', exportPdfUtils.getDefaultConfig( 'manual', {
+		extraPlugins: 'exportpdf'
+	} ) );
+
+	CKEDITOR.replace( 'editor2', exportPdfUtils.getDefaultConfig( 'manual', {
+		removePlugins: 'notification'
+	} ) );
+</script>
+>>>>>>> cf6b9cace8aae826b75c52fc48eccf39193095d5
