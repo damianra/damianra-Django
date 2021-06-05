@@ -23,7 +23,7 @@ function cargartabla(){
 				xhr.setRequestHeader("X-CSRFToken", csrftoken);
 			}
 		},
-        url : "http://127.0.0.1:8000/btcdata/btchistory/",
+        url : "https://damianra.pythonanywhere.com/btcdata/btchistory/",
 		type : "GET",
         success: function(json){
             json.forEach(element => {
@@ -36,7 +36,7 @@ function cargartabla(){
         error : function(xhr, errmsg, err){
 			console.log('Error en carga de respuesta');
 		},
-        
+
     });
 
     function generate_table(){
@@ -57,6 +57,6 @@ function cargartabla(){
                 $('html, body').animate({scrollTop: 0}, 800);
             }
         });
-        
+
     }
 }

@@ -27,12 +27,12 @@
 
                     </nav>
                 </div>
-                
+
         </div>
 
          <div class="col-12 col-md-6 col-lg-4 pb-4">
             <h3>Ultimos Proyectos:</h3>
-            {% for p in proyectos %}           
+            {% for p in proyectos %}
             <div class="card text-lg-center mt-4 p-2">
                 <img src="{{ p.imagenDestacada.url }}" class="card-img-top img-fluid" alt="{{ p.titulo }}"/>
                 <div class="card-body">
@@ -46,5 +46,5 @@
     </div>
 </div>
 
-<script src="{% static 'js/btcajax.js' %}"></script>
+<script src="{% static 'js/btcAjax.js' %}"></script>
 {% endblock content %}
