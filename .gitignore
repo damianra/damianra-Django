@@ -1,0 +1,4 @@
+# Ignorar en commit para github
+settings.py
+db.sqlite3
+btcAjax.js
