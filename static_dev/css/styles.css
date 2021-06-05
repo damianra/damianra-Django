@@ -74,6 +74,10 @@
 .card-body .btn:hover{
     background-color: #106baa;
 }
+.containerimg:hover{
+    opacity: 0.9;
+    transform: scale(0.95);
+}
 
 body{
     font-size: 18px;

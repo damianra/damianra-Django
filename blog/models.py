@@ -29,7 +29,7 @@ class Menu(models.Model):
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=100)
-    imagenDestacada = models.FileField(upload_to='imgproyectos', blank=True, null=True)
+    imagenDestacada = models.FileField(upload_to='imgproyectos', blank=True, null=True, default='imagenDestacada.jpg')
     slug = models.CharField(max_length=100,blank=True)
 
     def __str__(self):
